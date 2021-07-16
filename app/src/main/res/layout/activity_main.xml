@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".MainActivity">
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytBackMain"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyFaccioMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/lytControlMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytControlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcyFaccioMain">
+
+            <Button
+                android:id="@+id/btnNextMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNextClick"
+                android:text="NTX"
+                app:layout_constraintBottom_toBottomOf="@+id/lytControlMain"
+                app:layout_constraintEnd_toStartOf="@+id/btnResetMain"
+                app:layout_constraintStart_toStartOf="@+id/lytControlMain"
+                app:layout_constraintTop_toTopOf="@+id/lytControlMain" />
+
+            <Button
+                android:id="@+id/btnResetMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onResetClick"
+                android:text="RST"
+                app:layout_constraintBottom_toBottomOf="@+id/lytControlMain"
+                app:layout_constraintEnd_toStartOf="@+id/btnBodyMain"
+                app:layout_constraintStart_toEndOf="@+id/btnNextMain"
+                app:layout_constraintTop_toTopOf="@+id/lytControlMain" />
+
+            <Button
+                android:id="@+id/btnBodyMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBodyClick"
+                android:text="BDY"
+                app:layout_constraintBottom_toBottomOf="@+id/lytControlMain"
+                app:layout_constraintEnd_toEndOf="@+id/lytControlMain"
+                app:layout_constraintStart_toEndOf="@+id/btnResetMain"
+                app:layout_constraintTop_toTopOf="@+id/lytControlMain" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
